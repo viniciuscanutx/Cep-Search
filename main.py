@@ -16,7 +16,12 @@ class Ceptela:
 
         self.tela = sg.Window('CEP Search',layout)
         self.button, self.values = self.tela.Read()
-        
+
+while True:
+    window, event, values = sg.read_all_windows()
+#Quando a janela for fechada....
+    if window == Ceptela and event == sg.WIN_CLOSED:
+        break
         
     #Define as váriaveis que consultam o cep e o exibem na sua tela.
     def consultarocep(self,cep):
